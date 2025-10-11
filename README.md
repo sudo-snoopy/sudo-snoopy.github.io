@@ -1,3 +1,4 @@
-# joshrudi.github.io
+# sudo-snoopy.github.io
 
-This is my website, there are many like it but this one is mine.  Please have a look around and enjoy, but mind the code.  It's imported and is very rare and expensive.  Have a great day.
+“Start copying what you love. Copy copy copy copy. At the end of the copy you will find yourself.”
+― Yohji Yamamoto
