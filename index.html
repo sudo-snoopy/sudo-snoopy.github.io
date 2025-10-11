@@ -67,7 +67,7 @@
                         <a href="https://www.linkedin.com/in/joshuarudaitis/" target="_blank" class="home__social-icon">
                             <i class="uil uil-linkedin-alt"></i>
                         </a>
-                        <a href="https://github.com/joshrudi/" target="_blank" class="home__social-icon">
+                        <a href="https://github.com/sudo-snoopy/" target="_blank" class="home__social-icon">
                             <i class="uil uil-github-alt"></i>
                         </a>
                     </div>
@@ -85,17 +85,17 @@
             165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403
             129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028
             -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
-                                <image class="home__blob-img" x=0 y=0 xlink:href="assets/img/perfil.png"/>
+                                <image class="home__blob-img" x=0 y=0 xlink:href="assets/img/profile.jpg"/>
                             </g>
                         </svg>
 
                     </div>
                     <div class="home__data">
                         <h1 class="home__title">Hey, I'm Josh</h1>
-                        <h5 class="home__aka">Seattle, WA</h5>
+                        <h5 class="home__aka">New York, NY</h5>
                         <h3 class="home__subtitle">Software Engineer</h3>
                         <p class="home__description">Nature lover.<br>Tech enthusiast.<br>Burrito connoisseur.</p>
-                        <a href="https://drive.google.com/file/d/1wgXIKsK4Sl7K-AD6Ph4-260wTYp6YILi/preview" class="button button--flex">
+                        <a id="resume-button" class="button button--flex">
                             Resume <i class="uil uil-file-alt button__icon"></i>
                         </a>
                     </div>
@@ -111,6 +111,20 @@
             </div>
         </section>
 
+        <!--==================== RESUME MODAL ====================-->
+        <div class="services__modal" id="resume-modal">
+            <div class="services__modal-content resume__modal-content">
+                <h4 class="services__modal-title">My Resume</h4>
+                <i class="uil uil-times services__modal-close" id="resume-modal-close"></i>
+
+                <div class="resume__iframe-container">
+                    <!-- The embed URL is slightly different from the preview URL -->
+                    <iframe src="https://drive.google.com/file/d/14WBrGH2ZI3gkfFbuhxepTuxFP8Qm7AAn/preview" class="resume__iframe"></iframe>
+                </div>
+            </div>
+        </div>
+
+
         <!--==================== ABOUT ====================-->
         <section class="about section" id="about">
             <h2 class="section__title"> About Me</h2>
@@ -121,18 +135,20 @@
 
                 <div class="about__data">
                     <p class="about__description">
-                        A graduate of Computer Engineering from the University of Florida (go gators!) with multple years of industry experience and always looking for opportunities to learn and grow.
+                        A Computer Engineering graduate from the University of Florida 🐊
+                        <br>
+                        I'm currently helping to build the next generation of AI-powered language tools, creating intelligent solutions to help developers write better code, faster.
                     </p>
 
                     <div class="about__info">
                         <div >
-                            <span class="about__info-title">02+</span>
+                            <span class="about__info-title" id="years-experience">02+</span>
                             <span class="about__info-name">Years <br> experience </span>
                         </div>
 
                         <div>
-                            <span class="about__info-title">02</span>
-                            <span class="about__info-name">Companies <br> worked </span>
+                            <span class="about__info-title">AI</span>
+                            <span class="about__info-name">Language Tools <br> Development</span>
                         </div>
 
                         <div>
@@ -220,6 +236,28 @@
                     <div class="qualification__content" data-content id="work">
                         <!--===============================QUALIFICATION 1 ===========================-->
                         <div class="qualification__data">
+                            <div></div>
+                            <div>
+                                <span class="qualification__rounder"></span>
+                                <span class="qualification__line"></span>
+                            </div>
+
+                            <div>
+                                <h3 class="qualification__title">Software Engineer II</h3>
+                                <span class="qualification__subtitle">
+                                    <a href="https://www.meta.com" target="_blank">Meta</a>
+                                </span>
+                                <h5 class="qualification__location">New York, NY</h5>
+                                <div class="qualification__calendar">
+                                    <i class="uil uil-calendar-alt"></i>
+                                    June 2024 - Present
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!--===============================QUALIFICATION 2 ===========================-->
+                        <div class="qualification__data">
                             <div>
                                 <h3 class="qualification__title">Software Engineer II</h3>
                                 <span class="qualification__subtitle">
@@ -228,7 +266,7 @@
                                 <h5 class="qualification__location">Seattle, WA</h5>
                                 <div class="qualification__calendar">
                                     <i class="uil uil-calendar-alt"></i>
-                                    February 2023 - Present
+                                    February 2023 - May 2024
                                 </div>
                             </div>
 
@@ -238,7 +276,7 @@
                             </div>
                         </div>
 
-                        <!--===============================QUALIFICATION 2 ===========================-->
+                        <!--===============================QUALIFICATION 3 ===========================-->
                         <div class="qualification__data">
                             <div></div>
                             <div>
@@ -259,7 +297,7 @@
                             </div>
                         </div>
 
-                        <!--===============================QUALIFICATION 3 ===========================-->
+                        <!--===============================QUALIFICATION 4 ===========================-->
                         <div class="qualification__data">
                             <div>
                                 <h3 class="qualification__title">Software Engineer Intern</h3>
@@ -279,7 +317,7 @@
                             </div>
                         </div>
 
-                        <!--===============================QUALIFICATION 4 ===========================-->
+                        <!--===============================QUALIFICATION 5 ===========================-->
                         <div class="qualification__data">
                             <div></div>
                             <div>
@@ -374,7 +412,7 @@
                     <a href="https://www.linkedin.com/in/joshuarudaitis" target="_blank" class="footer__social-icon">
                         <i class="uil uil-linkedin-alt"></i>
                     </a>
-                    <a href="https://github.com/joshrudi" target="_blank" class="footer__social-icon">
+                    <a href="https://github.com/sudo-snoopy" target="_blank" class="footer__social-icon">
                         <i class="uil uil-github-alt"></i>
                     </a>
                 </div>

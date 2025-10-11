@@ -93,6 +93,33 @@ modalCloses.forEach(modalClose => {
     });
 });
 
+/*==================== RESUME MODAL ====================*/
+const resumeModal = document.getElementById('resume-modal'),
+      resumeButton = document.getElementById('resume-button'),
+      resumeClose = document.getElementById('resume-modal-close');
+
+/*===== MODAL SHOW =====*/
+if (resumeButton) {
+    resumeButton.addEventListener('click', () => {
+        // Use modal for desktop, new tab for mobile
+        if (window.innerWidth >= 768) {
+            resumeModal.classList.add('active-modal');
+        } else {
+            // The URL from your iframe
+            const resumeUrl = 'https://drive.google.com/file/d/1wgXIKsK4Sl7K-AD6Ph4-260wTYp6YILi/preview';
+            window.open(resumeUrl, '_blank');
+        }
+    });
+}
+
+/*===== MODAL HIDDEN =====*/
+function closeResumeModal() {
+    resumeModal.classList.remove('active-modal');
+}
+if (resumeClose) {
+    resumeClose.addEventListener('click', closeResumeModal);
+}
+
 /*==================== PORTFOLIO SWIPER  ====================*/
 let swiper = new Swiper(".portfolio__container", {
     cssMode: true,
@@ -177,3 +204,26 @@ themeButton.addEventListener('click', () => {
     localStorage.setItem('selected-theme', getCurrentTheme())
     localStorage.setItem('selected-icon', getCurrentIcon())
 })
+
+/*==================== DYNAMIC YEARS OF EXPERIENCE ====================*/
+function calculateYearsExperience(){
+    // Set your career start date (March 2021)
+    const startDate = new Date('2021-03-01');
+    const currentDate = new Date();
+
+    // Calculate the difference in milliseconds
+    const diff = currentDate.getTime() - startDate.getTime();
+
+    // Convert milliseconds to years, accounting for leap years
+    const years = diff / (1000 * 60 * 60 * 24 * 365.25);
+    const wholeYears = Math.floor(years);
+
+    // Format the string (e.g., "04+") and update the element
+    const experienceElement = document.getElementById('years-experience');
+    if (experienceElement) {
+        experienceElement.textContent = String(wholeYears).padStart(2, '0') + '+';
+    }
+}
+
+// Run the calculation on page load
+calculateYearsExperience();

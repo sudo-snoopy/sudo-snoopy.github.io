@@ -735,6 +735,24 @@ img{
     visibility: visible;
 }
 
+/* Resume Modal */
+.services__modal-content.resume__modal-content{
+    width: clamp(320px, 90vw, 800px);
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.resume__iframe-container{
+    flex-grow: 1;
+    overflow: hidden;
+}
+
+.resume__iframe{
+    width: 100%;
+    height: 100%;
+    border: none;
+}
 /*==================== PORTFOLIO ====================*/
 .portfolio__container{
     overflow: initial;
