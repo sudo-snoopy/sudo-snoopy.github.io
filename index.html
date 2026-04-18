@@ -1,435 +1,308 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!--==================== UNICONS ====================-->
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!--==================== SWIPER CSS ====================-->
-    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
-
-    <!--==================== CSS ====================-->
-    <link rel="stylesheet" href="assets/css/styles.css">
-
-    <title>Josh</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Josh — Software Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,200..400;1,9..144,200..400&family=Figtree:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+<link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-<!--==================== HEADER ====================-->
-    <header class="header" id="header">
-        <nav class="nav container">
-            <a href="#" class="nav__logo">Josh</a>
-            <div class="nav__menu" id="nav-menu">
-                <ul class="nav__list grid">
-                    <li class="nav__item">
-                        <a href="#home" class="nav__link active-link">
-                            <i class="uil uil-estate nav__icon"></i> Home
-                        </a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#about" class="nav__link">
-                            <i class="uil uil-user nav__icon"></i> About
-                        </a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#qualifications" class="nav__link">
-                            <i class="uil uil-graduation-cap nav__icon"></i> Qualifications
-                        </a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#portfolio" class="nav__link">
-                            <i class="uil uil-scenery nav__icon"></i> Portfolio
-                        </a>
-                    </li>
-                </ul>
-                <i class="uil uil-times nav__close" id="nav-close"></i>
-            </div>
 
-            <div class="nav__btns">
-                <!--Theme change button-->
-                <i class="uil uil-moon change-theme" id="theme-button"></i>
+<!-- ── Nav ──────────────────────────────────────────────────────────── -->
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="nav-name">Josh</a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#work">Work</a></li>
+      <li class="nav-social">
+        <a href="https://github.com/sudo-snoopy" target="_blank"><i class="uil uil-github"></i></a>
+        <a href="https://www.linkedin.com/in/joshuarudaitis/" target="_blank"><i class="uil uil-linkedin"></i></a>
+      </li>
+    </ul>
+  </div>
+</nav>
 
-                <div class="nav__toggle" id="nav-toggle">
-                    <i class="uil uil-apps"></i>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-<!--==================== MAIN ====================-->
-    <main class="main">
-        <!--==================== HOME ====================-->
-        <section class="home section" id="home">
-            <div class="home__container container grid">
-                <div class="home__content grid">
-                    <div class="home__social">
-                        <a href="https://www.linkedin.com/in/joshuarudaitis/" target="_blank" class="home__social-icon">
-                            <i class="uil uil-linkedin-alt"></i>
-                        </a>
-                        <a href="https://github.com/sudo-snoopy/" target="_blank" class="home__social-icon">
-                            <i class="uil uil-github-alt"></i>
-                        </a>
-                    </div>
-
-                    <div class="home__img">
-                        <svg class="home__blob" viewBox="0 0 200 187" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                            <mask id="mask0" mask-type="alpha">
-                                <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547
-            130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775
-            97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 -0.149132 97.9666
-            0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
-                            </mask>
-                            <g mask="url(#mask0)">
-                                <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346
-            165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403
-            129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028
-            -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
-                                <image class="home__blob-img" x=0 y=0 xlink:href="assets/img/profile.jpg"/>
-                            </g>
-                        </svg>
-
-                    </div>
-                    <div class="home__data">
-                        <h1 class="home__title">Hey, I'm Josh</h1>
-                        <h5 class="home__aka">New York, NY</h5>
-                        <h3 class="home__subtitle">Software Engineer</h3>
-                        <p class="home__description">Nature lover.<br>Tech enthusiast.<br>Burrito connoisseur.</p>
-                        <a id="resume-button" class="button button--flex">
-                            Resume <i class="uil uil-file-alt button__icon"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="home_scroll">
-                    <a href="#about" class="home__scroll-button button--flex">
-                        <i class="uil uil-mouse-alt home__scroll-mouse"></i>
-                        <span class="home__scroll-name">Scroll down</span>
-                        <i class="uil uil-arrow-down homw__scroll-arrow"></i>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!--==================== RESUME MODAL ====================-->
-        <div class="services__modal" id="resume-modal">
-            <div class="services__modal-content resume__modal-content">
-                <h4 class="services__modal-title">My Resume</h4>
-                <i class="uil uil-times services__modal-close" id="resume-modal-close"></i>
-
-                <div class="resume__iframe-container">
-                    <!-- The embed URL is slightly different from the preview URL -->
-                    <iframe src="https://drive.google.com/file/d/14WBrGH2ZI3gkfFbuhxepTuxFP8Qm7AAn/preview" class="resume__iframe"></iframe>
-                </div>
-            </div>
+<!-- ── Hero ─────────────────────────────────────────────────────────── -->
+<section class="hero" id="home">
+  <div class="wide">
+    <div class="hero-grid">
+      <div>
+        <p class="hero-kicker r1">New York, NY · Software Engineer</p>
+        <h1 class="r2">
+          Building<br><em>thoughtful</em><br>systems.
+        </h1>
+        <p class="hero-bio r3">
+          Specializing in AI-powered developer tools and the systems engineering behind AI quality. Currently building the next generation of agent-powered developer experiences at Meta.
+        </p>
+        <div class="hero-actions r4">
+          <button id="resume-button" class="btn btn-fill">Resume <i class="uil uil-file-alt"></i></button>
+          <a href="#about" class="btn btn-outline">About me</a>
         </div>
-
-
-        <!--==================== ABOUT ====================-->
-        <section class="about section" id="about">
-            <h2 class="section__title"> About Me</h2>
-            <span class="section__subtitle">Hi there!</span>
-
-            <div class="about__container container grid">
-                <img src="assets/img/about.jpg" alt="" class="about__img">
-
-                <div class="about__data">
-                    <p class="about__description">
-                        A Computer Engineering graduate from the University of Florida 🐊
-                        <br>
-                        I'm currently helping to build the next generation of AI-powered language tools, creating intelligent solutions to help developers write better code, faster.
-                    </p>
-
-                    <div class="about__info">
-                        <div >
-                            <span class="about__info-title" id="years-experience">02+</span>
-                            <span class="about__info-name">Years <br> experience </span>
-                        </div>
-
-                        <div>
-                            <span class="about__info-title">AI</span>
-                            <span class="about__info-name">Language Tools <br> Development</span>
-                        </div>
-
-                        <div>
-                            <span class="about__info-title">B.S.</span>
-                            <span class="about__info-name">Computer <br> Engineering </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </section>
-
-        <!--==================== QUALIFICATION ====================-->
-        <section class="qualification section" id="qualifications">
-            <h2 class="section__title">Qualifications</h2>
-            <div class="section__subtitle">My professional journey</div>
-
-            <div class="qualification__container container">
-                <div class="qualification__tabs">
-                    <div class="qualification__button button--flex qualification__active" data-target="#education">
-                        <i class="uil uil-graduation-cap qualification__icon"></i>
-                        Education
-                    </div>
-
-                    <div class="qualification__button button--flex" data-target="#work">
-                        <i class="uil uil-briefcase-alt qualification__icon"></i>
-                        Work
-                    </div>
-                </div>
-
-                <div class="qualification__sections">
-                    <!--===============================QUALIFICATION CONTENT 1 ===========================-->
-                    <div class="qualification__content qualification__active" data-content id="education">
-                        <!--===============================QUALIFICATION 1 ===========================-->
-                        <div class="qualification__data">
-                            <div>
-                                <h3 class="qualification__title">B.S. Computer Engineering</h3>
-                                <span class="qualification__subtitle">University of Florida, Gainesville, FL</span>
-                                <div class="qualification__calendar">
-                                    <i class="uil uil-calendar-alt"></i>
-                                    August 2016 - December 2020
-                                </div>
-                            </div>
-
-                            <div>
-                                <span class="qualification__rounder"></span>
-                                <span class="qualification__line"></span>
-                            </div>
-                        </div>
-                        <!--===============================QUALIFICATION 2 ===========================-->
-                        <div class="qualification__data">
-                            <div></div>
-                            <div>
-                                <span class="qualification__rounder"></span>
-                                <span class="qualification__line"></span>
-                            </div>
-
-                            <div>
-                                <h3 class="qualification__title">Study Abroad</h3>
-                                <span class="qualification__subtitle">Technical University of Denmark, Lyngby, Denmark</span>
-                                <div class="qualification__calendar">
-                                    <i class="uil uil-calendar-alt"></i>
-                                    Fall 2018
-                                </div>
-                            </div>
-                            
-                        </div>
-                        <!--===============================QUALIFICATION 3 ===========================-->
-                        <div class="qualification__data">
-                            <div>
-                                <h3 class="qualification__title">A.A.</h3>
-                                <span class="qualification__subtitle">St. Petersburg College, St. Petersburg, FL</span>
-                                <div class="qualification__calendar">
-                                    <i class="uil uil-calendar-alt"></i>
-                                    2012 - 2016
-                                </div>
-                            </div>
-
-                            <div>
-                                <span class="qualification__rounder"></span>
-                            </div>
-                        </div>
-                    </div>
-                    <!--===============================QUALIFICATION CONTENT 2 ===========================-->
-                    <div class="qualification__content" data-content id="work">
-                        <!--===============================QUALIFICATION 1 ===========================-->
-                        <div class="qualification__data">
-                            <div></div>
-                            <div>
-                                <span class="qualification__rounder"></span>
-                                <span class="qualification__line"></span>
-                            </div>
-
-                            <div>
-                                <h3 class="qualification__title">Software Engineer II</h3>
-                                <span class="qualification__subtitle">
-                                    <a href="https://www.meta.com" target="_blank">Meta</a>
-                                </span>
-                                <h5 class="qualification__location">New York, NY</h5>
-                                <div class="qualification__calendar">
-                                    <i class="uil uil-calendar-alt"></i>
-                                    June 2024 - Present
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <!--===============================QUALIFICATION 2 ===========================-->
-                        <div class="qualification__data">
-                            <div>
-                                <h3 class="qualification__title">Software Engineer II</h3>
-                                <span class="qualification__subtitle">
-                                    <a href="https://www.microsoft.com" target="_blank">Microsoft</a>
-                                </span>
-                                <h5 class="qualification__location">Seattle, WA</h5>
-                                <div class="qualification__calendar">
-                                    <i class="uil uil-calendar-alt"></i>
-                                    February 2023 - May 2024
-                                </div>
-                            </div>
-
-                            <div>
-                                <span class="qualification__rounder"></span>
-                                <span class="qualification__line"></span>
-                            </div>
-                        </div>
-
-                        <!--===============================QUALIFICATION 3 ===========================-->
-                        <div class="qualification__data">
-                            <div></div>
-                            <div>
-                                <span class="qualification__rounder"></span>
-                                <span class="qualification__line"></span>
-                            </div>
-
-                            <div>
-                                <h3 class="qualification__title">Software Engineer I</h3>
-                                <span class="qualification__subtitle">
-                                    <a href="https://www.microsoft.com" target="_blank">Microsoft</a>
-                                </span>
-                                <h5 class="qualification__location">Seattle, WA</h5>
-                                <div class="qualification__calendar">
-                                    <i class="uil uil-calendar-alt"></i>
-                                    March 2021 - February 2023
-                                </div>
-                            </div>
-                        </div>
-
-                        <!--===============================QUALIFICATION 4 ===========================-->
-                        <div class="qualification__data">
-                            <div>
-                                <h3 class="qualification__title">Software Engineer Intern</h3>
-                                <span class="qualification__subtitle">
-                                    <a href="https://www.microsoft.com" target="_blank">Microsoft</a>
-                                </span>
-                                <h5 class="qualification__location">Seattle, WA</h5>
-                                <div class="qualification__calendar">
-                                    <i class="uil uil-calendar-alt"></i>
-                                    June 2020 - August 2020
-                                </div>
-                            </div>
-
-                            <div>
-                                <span class="qualification__rounder"></span>
-                                <span class="qualification__line"></span>
-                            </div>
-                        </div>
-
-                        <!--===============================QUALIFICATION 5 ===========================-->
-                        <div class="qualification__data">
-                            <div></div>
-                            <div>
-                                <span class="qualification__rounder"></span>
-                            </div>
-
-                            <div>
-                                <h3 class="qualification__title">Software Engineer Intern</h3>
-                                <span class="qualification__subtitle">
-                                    <a href="https://www.motorolasolutions.com" target="_blank">Motorola Solutions</a>
-                                </span>
-                                <h5 class="qualification__location">Plantation, FL</h5>
-                                <div class="qualification__calendar">
-                                    <i class="uil uil-calendar-alt"></i>
-                                    Summer 2018 & Summer 2019
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!--==================== PORTFOLIO ====================-->
-        <section class="portfolio section" id="portfolio">
-            <h2 class="section__title">Professional Portfolio</h2>
-            <span class="section__subtitle">Most Recent Work</span>
-
-            <div class="portfolio__container container swiper-container">
-                <div class="swiper-wrapper">
-                    <!--======================== PORTFOLIO 1 =============-->
-                    <div class="portfolio__content grid swiper-slide">
-                        <img src="assets/img/portfolio1.gif" alt="" class="portfolio__img">
-
-                        <div class="portfolio__data">
-                            <h3 class="portfolio__title">Remote Labs Research</h3>
-                            <p class="portfolio__description">
-                                A Reproducible Solution for Implementing Online Laboratory Systems Through Inexpensive and Open-source Technology.
-                            </p>
-                            <a href="https://peer.asee.org/34043" class="button button--flex button--small portfolio__button">
-                                Read here
-                                <i class="uil uil-arrow-right button__icon"></i>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!--======================== PORTFOLIO 2 =============-->
-                    <div class="portfolio__content grid swiper-slide">
-                        <img src="assets/img/portfolio2.jpg" alt="" class="portfolio__img">
-
-                        <div class="portfolio__data">
-                            <h3 class="portfolio__title">Windows Sandbox</h3>
-                            <p class="portfolio__description">
-                                Key maintainer of the composition for the Container OS SKU that runs Microsoft container applications such as Windows Sandbox and Microsoft Defender Application Guard.
-                            </p>
-                            <a href="https://learn.microsoft.com/en-us/windows/security/application-security/application-isolation/windows-sandbox/windows-sandbox-overview" class="button button--flex button--small portfolio__button">
-                                More info
-                                <i class="uil uil-arrow-right button__icon"></i>
-                            </a>
-                        </div>
-                    </div>
-
-                </div>
-                <!--============ Add Arrows =============-->
-                <div class="swiper-button-next">
-                    <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
-                </div>
-                <div class="swiper-button-prev">
-                    <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
-                </div>
-
-                <!--============ Add Pagination =============-->
-                <div class="swiper-pagination"></div>
-            </div>
-        </section>
-
-        <!--==================== PAPERS ====================-->
-        <section class="papers section" id="papers">
-            
-        </section>
-
-    <!--==================== FOOTER ====================-->
-    <footer class="footer">
-        <div class="footer__bg">
-            <div class="footer__container container grid">
-                <div>
-                    <h5 class="footer__title">Josh</h5>
-                    <span class="footer__subtitle">Software Engineer</span>
-                </div>
-
-                <div class="footer__socials">
-                    <a href="https://www.linkedin.com/in/joshuarudaitis" target="_blank" class="footer__social-icon">
-                        <i class="uil uil-linkedin-alt"></i>
-                    </a>
-                    <a href="https://github.com/sudo-snoopy" target="_blank" class="footer__social-icon">
-                        <i class="uil uil-github-alt"></i>
-                    </a>
-                </div>
-            </div>
+        <div style="margin-top:1.75rem" class="r5">
+          <span class="avail"><span class="avail-dot"></span>Helping developers write better code, faster.</span>
         </div>
+      </div>
 
-    </footer>
+      <div class="photo-card r4">
+        <div class="photo-wrap">
+          <img src="assets/img/profile.jpg" alt="Josh">
+        </div>
+        <div class="photo-stamp">
+          <span class="city">New York, NY</span>
+          <span class="role">Software Engineer</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!--==================== SCROLL TOP ====================-->
-    <a href="" class="scrollup" id="scroll-up">
-        <i class="uil uil-arrow-up scroll__icon"></i>
-    </a>
+<hr class="divider">
 
-    <!--==================== SWIPER JS ====================-->
-    <script src="assets/js/swiper-bundle.min.js"></script>
+<!-- ── About ────────────────────────────────────────────────────────── -->
+<section id="about" class="r6">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="section-num">01.</span>
+      <h2 class="section-title">About <em>me</em></h2>
+      <div class="section-rule"></div>
+    </div>
 
-    <!--==================== MAIN JS ====================-->
-    <script src="assets/js/main.js"></script>
+    <div class="about-photo" style="margin: 0 auto 3rem; display: block;">
+      <img src="assets/img/about-alt.jpeg" alt="Josh">
+    </div>
+
+    <div class="about-grid">
+      <div class="about-body">
+        <p>
+          A Computer Engineering graduate from the <strong>University of Florida</strong> living in <strong>New York City</strong> with a passion for <a href="https://www.flickr.com/photos/200257494@N02/" target="_blank"><strong>photography and travel</strong></a>.
+        </p>
+        <p>
+          Currently helping to build and refine the next generation of <strong>Agent-Powered tools</strong>. Work is focused on creating intelligent infrastructure that enables developers to move faster without sacrificing reliability.
+        </p>
+      </div>
+
+      <div class="about-aside">
+        <div class="aside-stat">
+          <div class="n"><span id="years-experience">05</span><em>+</em></div>
+          <div class="l">Years experience</div>
+        </div>
+        <div class="aside-stat">
+          <div class="n">AI</div>
+          <div class="l">Language Tools Development</div>
+        </div>
+        <div class="aside-stat">
+          <div class="n">B.S.</div>
+          <div class="l">Computer Engineering</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider r6">
+
+<!-- ── Experience ────────────────────────────────────────────────────── -->
+<section id="experience" class="r6">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="section-num">02.</span>
+      <h2 class="section-title">My <em>journey</em></h2>
+      <div class="section-rule"></div>
+    </div>
+
+    <div class="tab-bar">
+      <div class="tab-indicator" id="tab-indicator"></div>
+      <button class="tab-btn active" onclick="switchTab(event,'work')">Work</button>
+      <button class="tab-btn" onclick="switchTab(event,'education')">Education</button>
+    </div>
+
+    <div id="tab-work" class="tab-panel active">
+      <div class="timeline">
+        <!-- Meta -->
+        <div class="tl-item">
+          <div class="tl-date">June 2024 — Present</div>
+          <div class="tl-line"><div class="tl-dot"></div></div>
+          <div class="tl-body">
+            <div class="tl-org">Meta</div>
+            <div class="tl-role">Software Engineer</div>
+            <div class="tl-loc">New York, NY</div>
+            <p class="tl-desc">Leading initiatives in AI Quality and Governance. Engineering agent-powered developer experiences and IDE integrations that optimize code generation trajectories at scale.</p>
+            <div class="tags">
+              <span class="tag ti">AI Quality</span>
+              <span class="tag ts">Agentic Systems</span>
+              <span class="tag tn">Developer Experience</span>
+            </div>
+          </div>
+        </div>
+        <!-- Microsoft merged -->
+        <div class="tl-item">
+          <div class="tl-date">March 2021 — May 2024</div>
+          <div class="tl-line"><div class="tl-dot"></div></div>
+          <div class="tl-body">
+            <div class="tl-org">Microsoft</div>
+            <div class="tl-role">Software Engineer II</div>
+            <div class="tl-loc">Seattle, WA</div>
+            <p class="tl-desc">Owned the Container Policy Manager for Windows. Architected unified inclusion paths for OS componentization, reducing validation overhead across distinct Windows SKUs.</p>
+            <div class="tags">
+              <span class="tag ti">OS Componentization</span>
+              <span class="tag tn">Systems Architecture</span>
+            </div>
+          </div>
+        </div>
+        <!-- MSFT Intern -->
+        <div class="tl-item">
+          <div class="tl-date">June 2020 — Aug 2020</div>
+          <div class="tl-line"><div class="tl-dot"></div></div>
+          <div class="tl-body">
+            <div class="tl-org">Microsoft</div>
+            <div class="tl-role">Software Engineer Intern</div>
+            <div class="tl-loc">Seattle, WA</div>
+            <p class="tl-desc">Engineered an autonomous driver verifier flighting tool capable of global deployment across the Windows Insider base (10M+ users).</p>
+            <div class="tags">
+              <span class="tag ti">Automation</span>
+            </div>
+          </div>
+        </div>
+        <!-- Motorola -->
+        <div class="tl-item">
+          <div class="tl-date">Summers 2018 & 2019</div>
+          <div class="tl-line"><div class="tl-dot"></div></div>
+          <div class="tl-body">
+            <div class="tl-org">Motorola Solutions</div>
+            <div class="tl-role">Software Engineer Intern</div>
+            <div class="tl-loc">Plantation, FL</div>
+            <p class="tl-desc">Developed communication infrastructure and firmware for mission-critical public safety devices.</p>
+            <div class="tags">
+              <span class="tag tn">Embedded Systems</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="tab-education" class="tab-panel">
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-date">2016 — 2020</div>
+          <div class="tl-line"><div class="tl-dot"></div></div>
+          <div class="tl-body">
+            <div class="tl-org">University of Florida</div>
+            <div class="tl-role">B.S. Computer Engineering</div>
+            <div class="tl-loc">Gainesville, FL</div>
+            <p class="tl-desc">Graduated from the Herbert Wertheim College of Engineering.</p>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-date">Fall 2018</div>
+          <div class="tl-line"><div class="tl-dot"></div></div>
+          <div class="tl-body">
+            <div class="tl-org">Technical University of Denmark</div>
+            <div class="tl-role">Study Abroad — Engineering</div>
+            <div class="tl-loc">Lyngby, Denmark</div>
+            <p class="tl-desc">International exchange program.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider r6">
+
+<!-- ── Work ─────────────────────────────────────────────────────────── -->
+<section id="work" class="r6">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="section-num">03.</span>
+      <h2 class="section-title">Selected <em>work</em></h2>
+      <div class="section-rule"></div>
+    </div>
+
+    <div class="work-grid">
+      <a href="https://agentskills.io" target="_blank" class="work-card">
+        <div class="work-card-img">
+          <svg viewBox="0 0 400 160" width="400" height="160" xmlns="http://www.w3.org/2000/svg" style="opacity:0.9">
+            <defs>
+              <marker id="arrow-head" markerWidth="5" markerHeight="5" refX="4" refY="2.5" orient="auto">
+                <path d="M0,0 L0,5 L5,2.5 z" fill="rgba(34,28,16,0.3)"/>
+              </marker>
+            </defs>
+            <rect width="400" height="160" fill="#CEC7AF"/>
+            <!-- Agent -->
+            <rect x="20" y="60" width="70" height="35" rx="6" fill="#C5BC9E" stroke="rgba(34,28,16,0.15)"/>
+            <text x="55" y="82" font-family="Figtree" font-size="9" fill="#4A4132" text-anchor="middle">AI Agent</text>
+            <!-- Disclosure Layer -->
+            <rect x="130" y="45" width="110" height="70" rx="8" fill="#E8E7F2" stroke="rgba(78,74,140,0.3)"/>
+            <text x="185" y="75" font-family="Figtree" font-size="9" fill="#4E4A8C" text-anchor="middle">Progressive</text>
+            <text x="185" y="88" font-family="Figtree" font-size="8" fill="#4E4A8C" text-anchor="middle">Disclosure Layer</text>
+            <!-- Target Skills -->
+            <rect x="280" y="30" width="90" height="30" rx="6" fill="#C5BC9E" stroke="rgba(34,28,16,0.15)"/>
+            <text x="325" y="49" font-family="Figtree" font-size="8" fill="#4A4132" text-anchor="middle">Skill Directory A</text>
+            <rect x="280" y="95" width="90" height="30" rx="6" fill="#C5BC9E" stroke="rgba(34,28,15,0.15)"/>
+            <text x="325" y="114" font-family="Figtree" font-size="8" fill="#4A4132" text-anchor="middle">Skill Directory B</text>
+            <!-- Connectors -->
+            <line x1="90" y1="78" x2="130" y2="78" stroke="rgba(34,28,16,0.25)" stroke-width="1.2" marker-end="url(#arrow-head)"/>
+            <path d="M240,70 L275,45" stroke="rgba(34,28,16,0.25)" stroke-width="1.2" fill="none" marker-end="url(#arrow-head)"/>
+            <path d="M240,85 L275,110" stroke="rgba(34,28,16,0.25)" stroke-width="1.2" fill="none" marker-end="url(#arrow-head)"/>
+          </svg>
+        </div>
+        <div class="work-card-body">
+          <div class="w-date">2026</div>
+          <h3>AI Agent Skill Stewardship</h3>
+          <p>Led the platform-wide implementation of <strong>Anthropic's agentskills.io</strong> Progressive Disclosure format across Meta's internal agent ecosystem.</p>
+        </div>
+      </a>
+
+      <a href="https://peer.asee.org/34043" target="_blank" class="work-card">
+        <div class="work-card-img">
+          <img src="assets/img/portfolio1.gif" alt="Remote Labs Research">
+        </div>
+        <div class="work-card-body">
+          <div class="w-date">2020</div>
+          <h3>Remote Labs Research</h3>
+          <p>Published research on an open-source solution for online laboratory systems using reproducible hardware and open-source software stacks.</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<hr class="divider r6">
+
+<!-- ── Contact / Footer ──────────────────────────────────────────────── -->
+<footer id="contact" class="r6">
+  <div class="wide">
+    <div class="footer-base">
+      <div class="footer-links-left">
+        <a href="https://github.com/sudo-snoopy" target="_blank"><i class="uil uil-github"></i> GitHub</a>
+        <a href="https://www.linkedin.com/in/joshuarudaitis/" target="_blank"><i class="uil uil-linkedin"></i> LinkedIn</a>
+      </div>
+      <span>Built with care · No frameworks</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ── Modal ───────────────────────────────────────────────────────── -->
+<div class="services__modal" id="resume-modal">
+    <div class="resume__modal-content">
+        <i class="uil uil-times services__modal-close" id="resume-modal-close"></i>
+        <div class="resume__iframe-container">
+            <iframe src="https://docs.google.com/document/d/e/2PACX-1vRx1Sp2aM6p1x1vm5Sm4Y2lzu_bKZ7NsvPdKaP3dWxWr08oMmguUMWahVM6oty5qGTocEhuNrZy81mY/pub?embedded=true" class="resume__iframe"></iframe>
+        </div>
+    </div>
+</div>
+
+<!-- ── Scroll Top ──────────────────────────────────────────────────── -->
+<a href="#" class="scrollup" id="scroll-up">
+    <i class="uil uil-arrow-up scroll__icon"></i>
+</a>
+
+<script src="assets/js/main.js"></script>
 </body>
 </html>

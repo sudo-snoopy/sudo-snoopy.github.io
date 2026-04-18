@@ -1,96 +1,36 @@
-/*==================== MENU SHOW Y HIDDEN ====================*/
-const  navMenu = document.getElementById('nav-menu'),
-    navToggle = document.getElementById('nav-toggle'),
-    navClose = document.getElementById('nav-close');
+/*==================== TAB SWITCHING ====================*/
+function switchTab(e, id) {
+  const btn = e.target;
+  const indicator = document.getElementById('tab-indicator');
+  
+  // Remove active class from all buttons and panels
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+  
+  // Add active class to clicked button
+  btn.classList.add('active');
+  
+  // Animate indicator
+  if (indicator) {
+    indicator.style.width = btn.offsetWidth + 'px';
+    indicator.style.transform = `translateX(${btn.offsetLeft - 4}px)`;
+  }
 
-/*===== MENU SHOW =====*/
-/* Validate if constant exists */
-if(navToggle){
-    navToggle.addEventListener('click', ()=>{
-        navMenu.classList.add('show-menu');
-    })
+  // Show target panel
+  const targetPanel = document.getElementById('tab-' + id);
+  if (targetPanel) {
+    targetPanel.classList.add('active');
+  }
 }
 
-/*===== MENU HIDDEN =====*/
-/* Validate if constant exists */
-if(navClose){
-    navClose.addEventListener('click', ()=>{
-        navMenu.classList.remove('show-menu');
-    })
-}
-
-/*==================== REMOVE MENU MOBILE ====================*/
-const navLink = document.querySelectorAll('.nav__link');
-
-function linkAction(){
-    const navMenu = document.getElementById('nav-menu');
-    // When we click on each nav__link, we remove the show-menu class
-    navMenu.classList.remove('show-menu');
-}
-navLink.forEach(n => n.addEventListener('click', linkAction));
-
-/*==================== ACCORDION SKILLS ====================*/
-const skillsContent = document.getElementsByClassName('skills__content'),
-    skillsHeader = document.querySelectorAll('.skills__header');
-
-function toggleSkills() {
-    let itemClass = this.parentNode.className;
-
-    for(i = 0; i < skillsContent.length; i++){
-        skillsContent[i].className = 'skills__content skills__close';
-    }
-
-    if(itemClass === 'skills__content skills__close'){
-        this.parentNode.className = 'skills__content skills__open';
-    }
-}
-
-skillsHeader.forEach((el) => {
-    el.addEventListener('click', toggleSkills);
-});
-
-/*==================== QUALIFICATION TABS ====================*/
-const tabs = document.querySelectorAll('[data-target]'),
-    tabContents = document.querySelectorAll('[data-content]')
-
-tabs.forEach(tab =>{
-    tab.addEventListener('click', ()=>{
-        const target = document.querySelector(tab.dataset.target);
-
-        tabContents.forEach(tabContent =>{
-            tabContent.classList.remove('qualification__active');
-        });
-
-        target.classList.add('qualification__active');
-
-        tabs.forEach(tab =>{
-            tab.classList.remove('qualification__active');
-        })
-        tab.classList.add('qualification__active');
-    })
-})
-
-/*==================== SERVICES MODAL ====================*/
-const modalViews = document.querySelectorAll('.services__modal'),
-    modalBtns = document.querySelectorAll('.services__button'),
-    modalCloses = document.querySelectorAll('.services__modal-close');
-
-let modal = function (modalClick){
-    modalViews[modalClick].classList.add('active-modal');
-};
-
-modalBtns.forEach((modalBtn, i)=>{
-    modalBtn.addEventListener('click', ()=>{
-        modal(i);
-    })
-});
-
-modalCloses.forEach(modalClose => {
-    modalClose.addEventListener('click', () =>{
-        modalViews.forEach((modalView) =>{
-            modalView.classList.remove('active-modal');
-        });
-    });
+// Initialize indicator position on load
+window.addEventListener('DOMContentLoaded', () => {
+  const activeBtn = document.querySelector('.tab-btn.active');
+  const indicator = document.getElementById('tab-indicator');
+  if (activeBtn && indicator) {
+    indicator.style.width = activeBtn.offsetWidth + 'px';
+    indicator.style.transform = `translateX(${activeBtn.offsetLeft - 4}px)`;
+  }
 });
 
 /*==================== RESUME MODAL ====================*/
@@ -98,21 +38,17 @@ const resumeModal = document.getElementById('resume-modal'),
       resumeButton = document.getElementById('resume-button'),
       resumeClose = document.getElementById('resume-modal-close');
 
-/*===== MODAL SHOW =====*/
 if (resumeButton) {
     resumeButton.addEventListener('click', () => {
-        // Use modal for desktop, new tab for mobile
         if (window.innerWidth >= 768) {
             resumeModal.classList.add('active-modal');
         } else {
-            // The URL from your iframe
-            const resumeUrl = 'https://drive.google.com/file/d/1wgXIKsK4Sl7K-AD6Ph4-260wTYp6YILi/preview';
+            const resumeUrl = 'https://docs.google.com/document/d/e/2PACX-1vRx1Sp2aM6p1x1vm5Sm4Y2lzu_bKZ7NsvPdKaP3dWxWr08oMmguUMWahVM6oty5qGTocEhuNrZy81mY/pub';
             window.open(resumeUrl, '_blank');
         }
     });
 }
 
-/*===== MODAL HIDDEN =====*/
 function closeResumeModal() {
     resumeModal.classList.remove('active-modal');
 }
@@ -120,110 +56,25 @@ if (resumeClose) {
     resumeClose.addEventListener('click', closeResumeModal);
 }
 
-/*==================== PORTFOLIO SWIPER  ====================*/
-let swiper = new Swiper(".portfolio__container", {
-    cssMode: true,
-    loop: true,
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-    },
-});
-
-/*==================== TESTIMONIAL ====================*/
-
-
-/*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
-const sections = document.querySelectorAll('section[id]')
-
-function scrollActive(){
-    const scrollY = window.pageYOffset;
-
-    sections.forEach(current =>{
-        const sectionHeight = current.offsetHeight;
-        const sectionTop = current.offsetTop - 50;
-        sectionId = current.getAttribute('id');
-
-        if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
-            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('active-link');
-        }else{
-            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('active-link');
-        }
-    })
-}
-window.addEventListener('scroll', scrollActive);
-
-
-/*==================== CHANGE BACKGROUND HEADER ====================*/
-function scrollHeader(){
-    const nav = document.getElementById('header');
-    // When the scroll is greater than 200 viewport height, add the scroll-header class to the header tag
-    if(this.scrollY >= 80) nav.classList.add('scroll-header'); else nav.classList.remove('scroll-header');
-}
-window.addEventListener('scroll', scrollHeader);
-
-
 /*==================== SHOW SCROLL UP ====================*/
 function scrollUp(){
     const scrollUp = document.getElementById('scroll-up');
-    // When the scroll is higher than 560 viewport height, add the show-scroll class to the a tag with the scroll-top class
-    if(this.scrollY >= 560) scrollUp.classList.add('show-scroll'); else scrollUp.classList.remove('show-scroll');
+    if(window.scrollY >= 560) scrollUp.classList.add('show-scroll'); else scrollUp.classList.remove('show-scroll');
 }
 window.addEventListener('scroll', scrollUp);
 
-/*==================== DARK LIGHT THEME ====================*/
-const themeButton = document.getElementById('theme-button')
-const darkTheme = 'dark-theme'
-const iconTheme = 'uil-sun'
-
-// Previously selected topic (if user selected)
-const selectedTheme = localStorage.getItem('selected-theme')
-const selectedIcon = localStorage.getItem('selected-icon')
-
-// We obtain the current theme that the interface has by validating the dark-theme class
-const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dark' : 'light'
-const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'uil-moon' : 'uil-sun'
-
-// We validate if the user previously chose a topic
-if (selectedTheme) {
-    // If the validation is fulfilled, we ask what the issue was to know if we activated or deactivated the dark
-    document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme)
-    themeButton.classList[selectedIcon === 'uil-moon' ? 'add' : 'remove'](iconTheme)
-}
-
-// Activate / deactivate the theme manually with the button
-themeButton.addEventListener('click', () => {
-    // Add or remove the dark / icon theme
-    document.body.classList.toggle(darkTheme)
-    themeButton.classList.toggle(iconTheme)
-    // We save the theme and the current icon that the user chose
-    localStorage.setItem('selected-theme', getCurrentTheme())
-    localStorage.setItem('selected-icon', getCurrentIcon())
-})
-
 /*==================== DYNAMIC YEARS OF EXPERIENCE ====================*/
 function calculateYearsExperience(){
-    // Set your career start date (March 2021)
     const startDate = new Date('2021-03-01');
     const currentDate = new Date();
-
-    // Calculate the difference in milliseconds
     const diff = currentDate.getTime() - startDate.getTime();
-
-    // Convert milliseconds to years, accounting for leap years
     const years = diff / (1000 * 60 * 60 * 24 * 365.25);
     const wholeYears = Math.floor(years);
 
-    // Format the string (e.g., "04+") and update the element
     const experienceElement = document.getElementById('years-experience');
     if (experienceElement) {
-        experienceElement.textContent = String(wholeYears).padStart(2, '0') + '+';
+        experienceElement.textContent = String(wholeYears).padStart(2, '0');
     }
 }
 
-// Run the calculation on page load
 calculateYearsExperience();
