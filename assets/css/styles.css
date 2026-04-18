@@ -737,11 +737,15 @@ footer {
 
 /* ── Responsive ──────────────────────────────────────────────────── */
  @media (max-width: 860px) {
-  .hero-grid, .about-grid { grid-template-columns: 1fr; gap: 3rem; text-align: center; }
+  .hero { padding: 2rem 0 3rem; }
+  .hero-grid { display: flex; flex-direction: column-reverse; gap: 2.5rem; text-align: center; }
+  .about-grid { grid-template-columns: 1fr; gap: 3rem; text-align: center; }
   .hero h1 { margin-left: auto; margin-right: auto; }
   .hero-bio { margin-left: auto; margin-right: auto; }
   .hero-actions { justify-content: center; }
-  .photo-card { max-width: 300px; margin: 0 auto; }
+  .photo-card { max-width: 220px; margin: 0 auto; }
+  /* Ensure face is visible in hero crop */
+  .hero .photo-wrap img { object-position: center 20%; }
   .work-grid { grid-template-columns: 1fr; }
   .footer-base { flex-direction: column; gap: 1.5rem; text-align: center; }
   .footer-links-left { justify-content: center; }

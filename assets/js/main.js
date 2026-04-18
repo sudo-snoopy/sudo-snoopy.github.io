@@ -25,6 +25,7 @@ function switchTab(e, id) {
 
 // Initialize indicator position on load
 window.addEventListener('DOMContentLoaded', () => {
+  window.scrollTo(0, 0); // Force scroll to top
   const activeBtn = document.querySelector('.tab-btn.active');
   const indicator = document.getElementById('tab-indicator');
   if (activeBtn && indicator) {
