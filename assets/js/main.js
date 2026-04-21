@@ -44,7 +44,7 @@ if (resumeButton) {
         if (window.innerWidth >= 768) {
             resumeModal.classList.add('active-modal');
         } else {
-            const resumeUrl = 'https://docs.google.com/document/d/e/2PACX-1vRx1Sp2aM6p1x1vm5Sm4Y2lzu_bKZ7NsvPdKaP3dWxWr08oMmguUMWahVM6oty5qGTocEhuNrZy81mY/pub';
+            const resumeUrl = 'https://drive.google.com/file/d/1uEsoEkrzVfs6AKVF5k03SNTeJNn9k-dh/view?usp=sharing';
             window.open(resumeUrl, '_blank');
         }
     });
